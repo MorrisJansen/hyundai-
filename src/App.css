@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
-}
+@media screen and (min-width: 768px) {
+  /* dit is voor medium schermen en groter */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  /* dit is voor de header */
+  .header-container {
+    padding: 20px 50px;
+    max-height: 100px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .logo-1 {
+    margin-left: 85px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logo-2 {
+    height: 70px;
+    width: 63px;
+    margin-right: 100px;
+    position: relative;
+    left: 900px;
+  }
+
+  /* dit is voor voor de hero */
+  .hero-container {
+    background-color: #f8f8ff;
+  }
+
+  .hoogte-hero {
+    height: 700px;
+  }
+
+  .marge-hero {
+    margin-left: 200px;
+  }
+
+  .nieuw-container {
+    background-color: #f0f0f0;
+    display: inline-block;
+    border-radius: 25px;
+    padding: 3px 20px;
+    font-weight: 600;
+  }
+
+  .nieuw {
+    color: #747474;
+  }
+
+  .hero-header-1 {
+    font-size: 66px;
+  }
+
+  .hero-header-2 {
+    font-size: 40px;
+  }
+
+  .paragraaf-1 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 18px;
+    width: 70%;
+  }
+
+  .paragraaf-2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  /* dit is voor de card in de hero */
+  .card-container {
+    width: 650px;
+    position: absolute;
+    left: 200px;
+    bottom: 0px;
+    z-index: 999;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .card-grens { 
+    border: none!important;
+  }
+
+  .card-text {
+    color: #002e6b; 
+    font-weight: bold;
+    margin-left: 10px;
+  }
+
+  .card-knop {
+    background-color: #002e6b!important;
+    font-weight: bold;
+    color: white!important;
+    border: none;
+  }
+
+  .card-knop-icoon {
+    color: #ffffff;
+    margin-left: 10px;
+  }
+
+  /* dit is voor de carousel */
+  .foto-carousel-1 {
+    width: 735px!important;
+    height: 745px!important;
+    object-fit: cover!important;
+    border-radius: 0 0 0 70px!important;
+  }
+
+  .ontdek-meer-link {
+    position: absolute!important;
+    bottom: 50px;
+    left: 100px;
+    z-index: 5;
+    letter-spacing: 5px;
+    font-size: 18px;
+  }
+
+  .pijl-links {
+    position: absolute;
+    bottom: 50px;
+    left: 600px;
+    z-index: 1;
+  }
+
+  .pijl-rechts {
+    position: absolute;
+    bottom: 50px;
+    right: 70px;
+    z-index: 1;
   }
 }
