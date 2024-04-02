@@ -1,12 +1,37 @@
 import React, { useEffect, useRef, useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+
 
 import './App.css';
 
+
+
+class ScrollToTopButton extends React.Component {
+  scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  render() {
+    return (
+      <button className='move-to-top d-lg-none d-md-none' onClick={this.scrollToTop}>
+        <FontAwesomeIcon icon={faChevronUp} style={{ color: '#ffffff' }} />
+      </button>
+    );
+  }
+}
+
+
 function Pagina() {
+
+
+
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
 
@@ -55,7 +80,7 @@ function Pagina() {
 
 
             {/* linkerkolom */}
-            <div className='col-lg-6 hoogte-hero'>
+            <div className=' col-sm-12 col-lg-6 hoogte-hero'>
               <div className='marge-hero'>
                 <div className='nieuw-container'>
                   <span className="nieuw">NIEUW</span>
@@ -64,18 +89,22 @@ function Pagina() {
                 <h3 className='hero-header-2'>Maak een groots statement</h3>
                 <p className='paragraaf-1'>Profiteer nu van een zeer scherpe aanbieding op de rijk uitgeruste i10 Comfort.</p>
                 <p className='paragraaf-2'>Je stapt al in vanaf €275 per maand*</p>
+                <p className='voorwaarde'>* Het maandbedrag van €275 geldt op basis van een looptijd van 72<br></br>
+maanden en 5.000 km per jaar bij de i10 Comfort!</p>
+
               </div>
 
 
               {/* card */}
               <div className="card-div false card-container">
-                <div className="p-4 p-md-3 card card-grens">
+              <div className="p-lg-4 p-md-3 card card-grens">
                   <div className="row">
                     <div className="d-flex align-items-center col-md-6">
                       <p className="text-md-start text-left mb-0 card-text">Private Lease nu tijdelijk<br />vanaf €275 p/m*</p>
                     </div>
                     <div className="card-knop-container d-flex justify-content-center align-items-center justify-content-md-end mt-md-0 mt-2 col-md-6">
-                      <button type="button" className="btn btn- h-100 p-3 pt-4 pb-4 card-knop"> Vraag offerte aan<FontAwesomeIcon icon={faArrowRight} className='card-knop-icoon'/></button>
+                    <button type="button" className="btn card-knop"> Vraag offerte aan<FontAwesomeIcon icon={faArrowRight} className='card-knop-icoon'/></button>
+
                     </div>
                   </div>
                 </div>
@@ -90,27 +119,14 @@ function Pagina() {
 
 
 {/* rechterkolom */}
-<div className="col-lg-6">
+<div id='carousel-klein' className="col-sm-12 col-lg-6">
   <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" ref={carouselRef}>
     <div className="carousel-inner">
 
 
       <div className={`carousel-item ${currentIndex === 0 ? 'active' : ''}`}>
         <img className="d-block foto-carousel-1 "  src="./slider-image.jpg" alt="First slide" />
-        <a className="bottom-text m-0 text-decoration-none text-white ontdek-meer-link" href="/i10-1#inclusive-section">ONTDEK MEER</a>
-        <span className="carousel-control-prev" onClick={prevSlide}>
-          <FontAwesomeIcon icon={faChevronLeft} className="bold-icon text-white cursor-pointer pijl-links"/>
-        </span>
-        <span className="carousel-control-next" onClick={nextSlide}>
-          <FontAwesomeIcon icon={faChevronRight} className="bold-icon text-white cursor-pointer pijl-rechts" style={{ position: 'absolute', bottom: '50px', right: '70px', zIndex: 1 }} />
-        </span>
-      </div>
-
-
-      
-      <div className={`carousel-item ${currentIndex === 1 ? 'active' : ''}`} style={{ position: 'relative' }}>
-        <img className="d-block w-100 foto-carousel-1" src="./slider-image-1.jpg" alt="Second slide" />
-        <a className="bottom-text m-0 text-decoration-none text-white ontdek-meer-link" href="/i10-1#inclusive-section">ONTDEK MEER</a>
+        <a className="bottom-text m-0 text-decoration-none ontdek-meer-link text-white" href="/i10-1#inclusive-section">ONTDEK MEER</a>
         <span className="carousel-control-prev" onClick={prevSlide}>
           <FontAwesomeIcon icon={faChevronLeft} className="bold-icon text-white cursor-pointer pijl-links"/>
         </span>
@@ -118,6 +134,21 @@ function Pagina() {
           <FontAwesomeIcon icon={faChevronRight} className="bold-icon text-white cursor-pointer pijl-rechts"/>
         </span>
       </div>
+
+
+      
+      <div className={`carousel-item ${currentIndex === 1 ? 'active' : ''}`} style={{ position: 'relative' }}>
+        <img className="d-block w-100 foto-carousel-1" src="./slider-image-1.jpg" alt="Second slide" />
+        <a className="bottom-text m-0 text-decoration-none ontdek-meer-link text-white" href="/i10-1#inclusive-section">ONTDEK MEER</a>
+        <span className="carousel-control-prev" onClick={prevSlide}>
+          <FontAwesomeIcon icon={faChevronLeft} className="bold-icon text-white cursor-pointer pijl-links"/>
+        </span>
+        <span className="carousel-control-next" onClick={nextSlide}>
+          <FontAwesomeIcon icon={faChevronRight} className="bold-icon text-white cursor-pointer pijl-rechts"/>
+        </span>
+      </div>
+
+
     </div>
   </div>
 </div>
@@ -127,9 +158,55 @@ function Pagina() {
         </div>
       </div>
 
-    <div style={{color: '#f2f8ff', height: '800px'}}>
 
+
+    {/* ronde knop die je naar boven brengt */}
+    <div>
+        <ScrollToTopButton />
     </div>
+    
+
+
+    <div className='sector-2'>
+
+
+      <div className='col-sm-12 col-lg-6'>
+        <img className='sector-2-foto' src='./sector-2.jpg' alt='foto sector 2'></img>
+      </div>
+
+      <div className='col-sm-12 col-lg-6'>
+        <div className='sector-2-tekst-container'>
+          <p className='sector-2-tekst-1'>Hyundai i10</p>
+          <h1 className='sector-2-tekst-2'>All-inclusive genieten met <br></br>Hyundai Private Lease</h1>
+          <ul className='sector-2-lijst'>
+            <li>Vast maandbedrag inclusief alle kosten, behalve brandstof</li>
+            <li>Nieuwe auto met inbegrepen rente en afschrijving</li>
+            <li>Pechhulp in binnenland en Europa</li>
+            <li>Motorrijtuigenbelasting inbegrepen</li>
+            <li>Bandenvervanging, schadeherstel en glasreparatie gedekt</li>
+            <li>Afleveringskosten en verwijderingsbijdrage inclusief</li>
+            <li>Onderhoud inbegrepen</li>
+            <li>Volle tank brandstof bij aflevering</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      
+    <div className='container-fluid'>
+      <div className='cards-container'>
+
+
+        <div className='card'>
+          <img className='card-icoon' src='./steering-wheel.png' alt='stuur'></img>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
 
 
 

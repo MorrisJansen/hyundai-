@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 @media screen and (min-width: 768px) {
   /* dit is voor medium schermen en groter */
 
@@ -26,18 +33,20 @@
   }
 
   .hoogte-hero {
-    height: 700px;
+    height: 800px;
+    padding: 0!important;
   }
 
   .marge-hero {
-    margin-left: 200px;
+    margin-left: 160px;
+    padding: 80px 0;
   }
 
   .nieuw-container {
     background-color: #f0f0f0;
     display: inline-block;
     border-radius: 25px;
-    padding: 3px 20px;
+    padding: 2px 20px;
     font-weight: 600;
   }
 
@@ -46,30 +55,53 @@
   }
 
   .hero-header-1 {
-    font-size: 66px;
+    font-family: 'Hyundai Sans Text Office', sans-serif; /* Hier wordt het lettertype toegepast op de body van de pagina */
+    font-weight: 800; /* Zorg ervoor dat het gewicht overeenkomt met wat je hebt ingesteld in @font-face */
+    font-size: 63px;
+    color: #002e6b;
+    letter-spacing: -3px;
   }
 
+
   .hero-header-2 {
+    font-family: 'Hyundai-Sans-Medium', sans-serif;
+    font-weight: 700;
     font-size: 40px;
+    color: #002e6b;
   }
 
   .paragraaf-1 {
+    font-family: 'Hyundai-Sans-Regular';
     margin-top: 50px;
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 17px;
     width: 70%;
   }
 
   .paragraaf-2 {
-    font-size: 18px;
+    font-family: 'Hyundai-Sans-Medium';
+    font-size: 17px;
     font-weight: 700;
+    color: black;
+  }
+
+
+  .voorwaarde {
+    font-family: Hyundai-Sans-Medium;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #c1c1c1;
+    position: absolute;
+    bottom: -160px;
+
   }
 
   /* dit is voor de card in de hero */
   .card-container {
-    width: 650px;
+    width: 700px;
     position: absolute;
-    left: 200px;
+    left: 160px;
     bottom: 0px;
     z-index: 999;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -90,6 +122,7 @@
     font-weight: bold;
     color: white!important;
     border: none;
+    padding: 21px 14px!important;
   }
 
   .card-knop-icoon {
@@ -119,6 +152,9 @@
     bottom: 50px;
     left: 600px;
     z-index: 1;
+    font-size: 24px; /* Grootte aanpassen */
+    color: white;
+    
   }
 
   .pijl-rechts {
@@ -126,5 +162,285 @@
     bottom: 50px;
     right: 70px;
     z-index: 1;
+    font-size: 24px; /* Grootte aanpassen */
+    color: white;
   }
+
+.sector-2 {
+  height: 100%;
+  width: 100%;
+  color: #f2f8ff;
+  display: flex; /* Gebruik flexbox voor eenvoudige uitlijning */
+
+
+}
+
+.sector-2-foto {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.sector-2-tekst-container {
+  margin-top: 160px;
+  margin-left: 30px;
+}
+
+.sector-2-tekst-1 {
+  color: #002e6b;
+  font-family: Hyundai-Sans-Regular;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sector-2-tekst-2 {
+  color: #002e6b;
+  font-family: Hyundai-Sans-Medium;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+
+.sector-2-lijst li {
+  font-family: Hyundai-Sans-Regular;
+  font-size: 18px;
+  color: black;
+  margin-top: 5px;
+}
+
+
+/* dit is voor de cards in sector 2 */
+
+.cards-container {
+  height: 1800px;
+  background-color: #002e6b;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
+  display: block;
+}
+
+
+.card-icoon {
+  height: 10px;
+  width: 10px;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  /* voor kleine schermen */
+
+  .header-container {
+    height: 88px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; 
+    background-color: white;
+  }
+
+.logo-1,
+.logo-2 {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+  /* voor de hero */
+
+  .nieuw-container {
+    background-color: #f0f0f0;
+    display: inline-block;
+    border-radius: 25px;
+    padding: 2px 20px;
+    font-weight: 600;
+
+  }
+
+  .nieuw {
+    color: #747474;
+  }
+
+  .hero-header-1 {
+    font-family: 'Hyundai Sans Text Office', sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    color: #002e6b;
+    letter-spacing: -3px;
+  }
+
+  .hero-header-2 {
+    font-family: 'Hyundai-Sans-Medium', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #002e6b;
+  }
+
+  .paragraaf-1 {
+    font-family: 'Hyundai-Sans-Regular';
+     margin-bottom: 0;
+    font-size: 11px;
+    width: 70%;
+  }
+
+  .paragraaf-2 {
+    font-family: 'Hyundai-Sans-Medium';
+    font-size: 11px;
+    font-weight: 700;
+    color: black;
+  }
+
+
+
+  /* dit is voor de carousel */
+  #carouselexpample {
+    width: 100%;
+  }
+
+  #carousel-klein {
+    padding: 0!important;
+  }
+  
+
+
+
+ .carousel-item img {
+  width: 100%; /* 1 */
+  height: 300px; /* 2 */
+  object-fit: cover; /* 3 */
+}
+
+.carousel-item {
+  display: block;
+}
+
+
+.pijl-links {
+  z-index: 999;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.pijl-rechts {
+  z-index: 999;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.ontdek-meer-link {
+  color: white;
+  font-family: 'Hyundai-Sans-Regular', sans-serif;
+  font-size: 12px;
+  z-index: 9999;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%); /* Centreer het element horizontaal */
+
+}
+
+
+
+
+
+
+/* dit is voor de card */
+
+
+.card-container {
+  width: 95%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 110px; /* Pas de waarde aan om de kaart hoger te plaatsen */
+  z-index: 999;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  text-align: center; /* Centreer de tekst in de kaart */
+
+}
+
+
+
+.card-grens {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+
+
+.card-text {
+  color: #002e6b;
+  font-weight: bold;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+.card-knop-container {
+  padding-bottom: 10px;  
+}
+
+.card-knop {
+  background-color: #002e6b!important;
+  font-weight: bold;
+  color: white!important;
+  border: none;
+  padding: 21px 14px!important;
+  width: 180.56px;
+  height: 64.6px;
+}
+
+.card-knop-icoon {
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.voorwaarde {
+  font-size: 10px;
+  position: absolute;
+  bottom: 10px;
+}
+
+
+/* volgende sectie */
+
+.move-to-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #002e6b;
+  position: absolute;
+  bottom: -40px;
+  right: 20px;
+}
 }
