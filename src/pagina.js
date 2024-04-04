@@ -332,7 +332,11 @@ maanden en 5.000 km per jaar bij de i10 Comfort!</p>
 
 
 
-<div className='sector-4'></div>
+<div className='sector-4'>
+
+  <h1 className='sector-4-tekst-1'>Uitvoeringen en hun functionaliteiten</h1>
+
+</div>
 
 
 

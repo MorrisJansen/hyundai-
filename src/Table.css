@@ -1,0 +1,79 @@
+/* Algemene opmaak */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f8ff;
+  margin: 0;
+}
+
+/* Tabel opmaak */
+.table-container {
+  overflow-x: auto;
+  padding-left: 15px;
+  margin-left: 180px;
+  margin-right: 180px;
+}
+
+.custom-table {
+  border-collapse: separate;
+  border-spacing: 8px;
+  width: 100%;
+}
+
+.header-cell {
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.custom-table th:first-child {
+  width: 380px;
+  height: 87px;
+}
+
+.hoofd-2 {
+  width: 100px;
+}
+
+.hoofd-3 {
+  width: 160px;
+}
+
+.prijsaanduiding {
+  font-size: 14px;
+}
+
+.hoofd-4 {
+  width: 190px;
+}
+
+.hoofd-5 {
+  width: 126px;
+}
+
+.hoofd-6 {
+  width: 96px;
+}
+
+
+
+/* Opmaak voor de achtergrond- en tekstkleur van thead cellen */
+.custom-table thead th:nth-child(odd) {
+  background-color: #002e6b;
+  color: white;
+}
+
+.custom-table thead th:nth-child(even) {
+  background-color: white;
+  color: #002e6b;
+}
+
+/* Media query voor kleine schermen */
+@media only screen and (max-width: 375px) {
+  .table-container {
+    overflow-x: auto;
+  }
+}
