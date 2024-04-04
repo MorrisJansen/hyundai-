@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.5;
 }
 
 
@@ -183,6 +184,10 @@
   width: 100%;
 }
 
+.sector-2-foto-klein {
+  display: none;
+}
+
 .sector-2-tekst-container {
   margin-top: 160px;
   margin-left: 30px;
@@ -257,7 +262,7 @@
 /* sector 3 */
 
 .sector-3 {
-  height: 1000px;
+  height: 600px;
 }
 
 .sector-3-tekst-1 {
@@ -266,6 +271,7 @@
   font-weight: 500;
   font-family: Hyundai-Sans-Regular;
   text-align: center;
+  margin-top: 60px;
 }
 
 .sector-3-tekst-2 {
@@ -306,6 +312,19 @@
 
 @media screen and (max-width: 767px) {
   /* voor kleine schermen */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.container-klein-geheel {
+  width: 100vw;
+
+
+}
+
 
   .header-container {
     height: 88px;
@@ -413,7 +432,8 @@
   position: absolute;
   bottom: 80px;
   left: 50%;
-  transform: translateX(-50%); /* Centreer het element horizontaal */
+  letter-spacing: 5px;
+  transform: translateX(-50%);
 
 }
 
@@ -430,10 +450,10 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 110px; /* Pas de waarde aan om de kaart hoger te plaatsen */
+  bottom: 110px;
   z-index: 999;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  text-align: center; /* Centreer de tekst in de kaart */
+  text-align: center;
 
 }
 
@@ -472,10 +492,19 @@
   margin-left: 10px;
 }
 
+
 .voorwaarde {
+  display: none;
+}
+
+.voorwaarde-klein {
   font-size: 10px;
+  text-align: left;
+  color: #c1c1c1;
   position: absolute;
-  bottom: 10px;
+  bottom: 50px;
+  left: 20px;
+  z-index: 9;
 }
 
 
@@ -487,51 +516,105 @@
   border-radius: 50%;
   background-color: #002e6b;
   position: absolute;
-  bottom: -40px;
+  bottom: -35px;
   right: 20px;
+  z-index: 999;
 }
 
 
 /* sector 2 kleine schermen */
 
 .sector-2 {
-  padding: 20px; /* Voeg wat ruimte toe rondom de sectie */
-}
-
-.col-sm-12.col-lg-6 {
-  width: 100%; /* Maak de kolommen volledig breed op kleine schermen */
-  margin-bottom: 20px; /* Voeg ruimte toe tussen de kolommen */
-}
-
-.sector-2-foto {
-  max-width: 100%; /* Zorg ervoor dat de foto niet breder is dan de container */
-  height: auto; /* Behoud de aspect ratio van de foto */
-  display: block; /* Zet de foto als block element voor betere responsiviteit */
-  margin-bottom: 20px; /* Voeg wat ruimte toe onder de foto */
+  margin-top: 200px;
+  position: relative;
+  background-color: #F2F8FF;
+  height:   1350px;
 }
 
 .sector-2-tekst-container {
-  text-align: center; /* Centreer de tekst in het tekstgedeelte */
+  text-align: center;
+  position: relative;
+  top: 50px;
+  height: 1000px;
 }
+
+.sector-2-tekst-1 , 
 
 .sector-2-lijst {
-  padding-inline-start: 0; /* Verwijder standaard lijststijlen */
-  text-align: center; /* Centreer de lijstitems */
+  margin: 0 15px;
+  text-align: left ;
 }
 
+
+
+.sector-2-tekst-1 , .sector-2-tekst-2 {
+  color: #002e6b;
+  text-align: left;
+}
+
+.sector-2-tekst-2 {
+  margin: 0 15px;
+}
+
+.sector-2-foto {
+  display: none;
+}
+
+.sector-2-foto-klein {
+  width: 375px;
+  height: 300px;
+  object-fit: cover;
+  position: absolute;
+  bottom: calc(43% + 25px);
+}
+
+
 .cards-container {
-  display: flex;
+  display: flex; 
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center; /* Centreer de cards horizontaal */
+  position: absolute;
+  top: 675px;
+  width: 100%;
 }
 
 .cards {
-  width: 45%; /* Maak de cards wat smaller voor een betere indeling */
-  margin: 0 5px 20px; /* Voeg wat ruimte toe tussen de cards */
+  width: 70%;
+  background-color: white;
+  margin-bottom: 70px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  padding: 30px;
 }
 
 
 
+.cards-icoon {
+  margin-right: 10px;
+}
 
+.cards-text {
+  flex: 1;
+  text-align: left;
+  align-items: center;
+  margin: 0;
+  color: #002e6b;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  font-family: Hyundai-Sans-Bold;
+}
+
+
+
+.sector-3 {
+  display: block;
+  position: absolute;
+  top: calc(400% + 50px);
+}
 
 }

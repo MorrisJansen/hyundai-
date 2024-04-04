@@ -104,7 +104,7 @@ function Pagina() {
 
 
 
-    <div>
+    <div className='container-klein-geheel'>
     <div className='bg-white header mb-1'>
     <div className='header-container'>
     <svg className='logo-1' width="200" height="28" viewBox="0 0 308 43" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,7 +132,7 @@ function Pagina() {
                 <h3 className='hero-header-2'>Maak een groots statement</h3>
                 <p className='paragraaf-1'>Profiteer nu van een zeer scherpe aanbieding op de rijk uitgeruste i10 Comfort.</p>
                 <p className='paragraaf-2'>Je stapt al in vanaf €275 per maand*</p>
-                <p className='voorwaarde'>* Het maandbedrag van €275 geldt op basis van een looptijd van 72<br></br>
+                <p className='voorwaarde d-sm-none d-md-none'>* Het maandbedrag van €275 geldt op basis van een looptijd van 72<br></br>
 maanden en 5.000 km per jaar bij de i10 Comfort!</p>
 
               </div>
@@ -201,6 +201,8 @@ maanden en 5.000 km per jaar bij de i10 Comfort!</p>
         </div>
       </div>
 
+      <p className='voorwaarde-klein'>* Het maandbedrag van €275 geldt op basis van een looptijd van 72<br></br>
+maanden en 5.000 km per jaar bij de i10 Comfort!</p>
 
 
     {/* ronde knop die je naar boven brengt */}
@@ -233,6 +235,9 @@ maanden en 5.000 km per jaar bij de i10 Comfort!</p>
           </ul>
         </div>
       </div>
+
+      <img className='sector-2-foto-klein' src='./sector-2.jpg' alt='foto sector 2'></img>
+
       
 
       {/* cards */}
