@@ -290,48 +290,49 @@ maanden en 5.000 km per jaar bij de i10 Comfort!</p>
 
 <p className='sector-3-tekst-2'>Een frisse kijk op een gedurfd ontwerp</p>
 
-
-<div className="container pt-4" style={{ maxWidth: '1110px', margin: '0 auto' }}>
-      <div className="" style={{ display: 'flex', justifyContent: 'center' }} {...handlers}>
-        {images.map((image, index) => (
-          <div key={index}>
-            <img
-              src={image}
-              alt={`Image ${index + 1}`}
-              className="img-fluid"
-              style={{
-                padding: '5px',
-                height: '380px',
-                objectFit: 'cover',
-                maxWidth: index === initialImages.length - 1 ? '100px' : 'auto',
-                borderTopLeftRadius: index === initialImages.length - 1 ? '20px' : '0',
-                borderBottomLeftRadius: index === initialImages.length - 1 ? '20px' : '0'
-              }}
-              onDragStart={e => e.preventDefault()} // Voorkom het standaard sleepgedrag van de afbeelding
-            />
-          </div>
-        ))}
+<div className="sector-3-container pt-4" style={{ maxWidth: '1110px', margin: '0 auto' }}>
+  <div className="sector-3-afbeeldingen" style={{ display: 'flex', justifyContent: 'center' }} {...handlers}>
+    {images.map((image, index) => (
+      <div key={index}>
+        <img
+          src={image}
+          alt={`Afbeelding ${index + 1}`}
+          id={`image-${index}`} // Uniek id toegevoegd aan de afbeelding
+          className="img-vloeistof"
+          style={{
+            padding: '5px',
+            height: '380px',
+            objectFit: 'cover',
+            maxWidth: index === initialImages.length - 1 ? '100px' : 'auto'
+          }}
+          onDragStart={e => e.preventDefault()} // Voorkom het standaard sleepgedrag van de afbeelding
+        />
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-        {initialImages.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => handleClick(index)}
-            style={{
-              width: index === activeIndex ? '20px' : '10px',
-              height: '5px',
-              background: index === activeIndex ? 'black' : 'gray',
-              marginRight: '5px',
-              transition: 'width 0.3s ease-in-out',
-              cursor: 'pointer'
-            }}
-          />
-        ))}
-      </div>
-    </div>
-
-
+    ))}
+  </div>
+  <div className="sector-3-voorbeelden" style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+    {initialImages.map((_, index) => (
+      <div
+        key={index}
+        onClick={() => handleClick(index)}
+        style={{
+          width: index === activeIndex ? '20px' : '10px',
+          height: '5px',
+          background: index === activeIndex ? 'black' : 'gray',
+          marginRight: '5px',
+          transition: 'width 0.3s ease-in-out',
+          cursor: 'pointer'
+        }}
+      />
+    ))}
+  </div>
 </div>
+</div>
+
+
+
+
+<div className='sector-4'></div>
 
 
 

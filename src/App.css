@@ -259,6 +259,12 @@
   margin-left: 21px;
 }
 
+
+
+
+
+
+
 /* sector 3 */
 
 .sector-3 {
@@ -613,8 +619,45 @@
 
 .sector-3 {
   display: block;
-  position: absolute;
-  top: calc(400% + 50px);
+  height: 870px;
+  background-color: white;
+  margin-top: 50px;
+  overflow: hidden;
 }
+
+.sector-3-tekst-1 , .sector-3-tekst-2 {
+  color: #002e6b;
+  text-align: center;
+}
+
+.sector-3-tekst-1 {
+  font-size: 16px;
+  font-family: Hyundai-Sans-Regular;
+  font-weight: 400;
+}
+
+.sector-3-tekst-2 {
+  font-size: 24px;
+  font-family: Hyundai-Sans-Medium;
+  font-weight: 700;
+}
+
+.sector-3-afbeeldingen img:nth-child(1) {
+  width: 245px;
+  height: 380px;
+  object-fit: contain;
+  border-radius: 15px;
+
+
+}
+
+
+
+
+
+.sector-3-afbeeldingen img:nth-child(2) {
+
+}
+
 
 }
