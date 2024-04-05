@@ -12,8 +12,8 @@ body {
 .table-container {
   overflow-x: auto;
   padding-left: 15px;
-  margin-left: 180px;
-  margin-right: 180px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .custom-table {
@@ -32,6 +32,10 @@ body {
 .custom-table th:first-child {
   width: 380px;
   height: 87px;
+}
+
+.hoofd-1 {
+  width: 380px;
 }
 
 .hoofd-2 {
@@ -77,3 +81,19 @@ body {
     overflow-x: auto;
   }
 }
+
+
+
+/* CSS voor alle elementen */
+.custom-table th,
+.custom-table td {
+  text-align: center; /* Centreren van de tekst */
+}
+
+.divider {
+  border-bottom: 1px solid #dee2e6;
+  /* width: 75%; */
+
+}
+
+

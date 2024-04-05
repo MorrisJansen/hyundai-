@@ -297,7 +297,7 @@ maanden en 5.000 km per jaar bij de i10 Comfort!</p>
         <img
           src={image}
           alt={`Afbeelding ${index + 1}`}
-          id={`image-${index}`} // Uniek id toegevoegd aan de afbeelding
+          id={`image-${index}`}
           className="img-vloeistof"
           style={{
             padding: '5px',
@@ -305,7 +305,7 @@ maanden en 5.000 km per jaar bij de i10 Comfort!</p>
             objectFit: 'cover',
             maxWidth: index === initialImages.length - 1 ? '100px' : 'auto'
           }}
-          onDragStart={e => e.preventDefault()} // Voorkom het standaard sleepgedrag van de afbeelding
+          onDragStart={e => e.preventDefault()}
         />
       </div>
     ))}
@@ -342,7 +342,7 @@ maanden en 5.000 km per jaar bij de i10 Comfort!</p>
 
 
 
-
+<footer className='privacy'>Bekijk de <a href='https://leadgen.republish.nl/api/content/hyundai-privacy'>Privacy</a> & <a href='https://leadgen.republish.nl/api/content/hyundai-voorwaarden'>voorwaarden</a> van deze actie.</footer>
 
     </div>
   );
